@@ -6,6 +6,9 @@ on:
       - master
   pull_request:
 
+env:
+  NODE_VERSION: v16.15.1
+
 jobs:
   test-and-lint:
     name: Test and Lint
@@ -16,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: v14.13.1
+          node-version: ${{ env.NODE_VERSION }}
       - name: Install Yarn
         run: npm i -g yarn
       - name: Install dependencies
