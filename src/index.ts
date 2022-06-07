@@ -46,11 +46,16 @@ export type FigspecFrameViewerProps = FigspecFrameViewerElementProps &
 //       `createComponent` has `RefAttributes<unknown>`, which is incompatible with existing
 //       type signature (and breaks ref typings). Also the explicit props definition prevents
 //       every properties turns into optional.
-export const FigspecFrameViewer = (createComponent(React, "figspec-frame-viewer", FigspecFrameViewerElement, {
-  onNodeSelect: "nodeselect",
-  onPositionChange: "positionchange",
-  onScaleChange: "scalechange",
-}) as unknown) as ForwardRefExoticComponent<
+export const FigspecFrameViewer = createComponent(
+  React,
+  "figspec-frame-viewer",
+  FigspecFrameViewerElement,
+  {
+    onNodeSelect: "nodeselect",
+    onPositionChange: "positionchange",
+    onScaleChange: "scalechange",
+  }
+) as unknown as ForwardRefExoticComponent<
   FigspecFrameViewerProps & RefAttributes<FigspecFrameViewerElement>
 >;
 
@@ -88,10 +93,15 @@ interface FigspecFileViewerEvents {
 export type FigspecFileViewerProps = FigspecFileViewerElementProps &
   FigspecFileViewerEvents;
 
-export const FigspecFileViewer = (createComponent(React, "figspec-file-viewer", FigspecFileViewerElement, {
-  onNodeSelect: "nodeselect",
-  onPositionChange: "positionchange",
-  onScaleChange: "scalechange",
-}) as unknown) as ForwardRefExoticComponent<
+export const FigspecFileViewer = createComponent(
+  React,
+  "figspec-file-viewer",
+  FigspecFileViewerElement,
+  {
+    onNodeSelect: "nodeselect",
+    onPositionChange: "positionchange",
+    onScaleChange: "scalechange",
+  }
+) as unknown as ForwardRefExoticComponent<
   FigspecFileViewerProps & RefAttributes<FigspecFileViewerElement>
 >;
