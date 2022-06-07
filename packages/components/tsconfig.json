@@ -6,7 +6,8 @@
     "lib": ["ESNext", "DOM"],
     "strict": true,
     "moduleResolution": "Node",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true
   },
   "include": ["./src/**/*.ts"]
 }
