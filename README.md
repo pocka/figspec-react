@@ -1,17 +1,21 @@
 # @figspec/react
 
-A React binding for `@figspec/components`.
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![npm](https://img.shields.io/npm/v/@figspec/react?label=%40figspec%2Freact)](https://www.npmjs.com/package/@figspec/react)
+
+A React binding for [`@figspec/components`](https://github.com/pocka/figspec).
 
 ## Installation
 
-You need to install both this package and `@figspec/components`.
-
 ```sh
-$ yarn add @figspec/react @figspec/components
+# npm
+$ npm i @figspec/react
 
-# or
+# Yarn
+$ yarn add @figspec/react
 
-$ npm i @figspec/react @figspec/components
+# pnpm
+$ pnpm add @figspec/react
 ```
 
 ## Usage
