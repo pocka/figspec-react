@@ -1,16 +1,37 @@
-# figspec
+# @figspec/react
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-![npm (scoped)](https://img.shields.io/npm/v/@figspec/components?label=%40figspec%2Fcomponents)
-![npm (scoped)](https://img.shields.io/npm/v/@figspec/react?label=%40figspec%2Fcomponents)
+A React binding for `@figspec/components`.
 
-An unofficial Figma spec viewer. [Figma Live Embed Kit](https://www.figma.com/developers/embed) - Live update + Guidelines + Inspector.
+## Installation
 
-## Packages
+You need to install both this package and `@figspec/components`.
 
-Please refer to each package's README.
+```sh
+$ yarn add @figspec/react @figspec/components
 
-| Directory Name                                 | Package Name          | Language   | Description                            |
-| ---------------------------------------------- | --------------------- | ---------- | -------------------------------------- |
-| [`packages/components`](./packages/components) | `@figspec/components` | TypeScript | Web Components for general usage.      |
-| [`packages/react`](./packages/react)           | `@figspec/react`      | TypeScript | React bindings for the Web Components. |
+# or
+
+$ npm i @figspec/react @figspec/components
+```
+
+## Usage
+
+See the docs at `@figspec/components`.
+
+This bindings enables you to use the CustomElement's property via React's component props.
+You don't need to use kebab-case attributes :camel::dash:
+
+```jsx
+import { FigspecViewer } from "@figspec/react";
+
+const logSelectedNode = (ev) => {
+  console.log(ev.detail.selectedNode);
+};
+
+<FigspecFrameViewer
+  nodes={nodes}
+  renderedImage={renderedImage}
+  zoomMargin={200}
+  onNodeSelect={logSelectedNode}
+/>;
+```

@@ -1,7 +1,6 @@
 # -- Do not put platform specific rules here (e.g. IDE config, OS meta files)
 
 # Common
-.env
 *.log
 
 # Node
@@ -10,5 +9,12 @@
 node_modules
 package-lock.json
 
+## Storybook
+/storybook-static
+
 ## Packed tarball
 packages/*/*.tgz
+
+# Project specific
+/esm
+/cjs
