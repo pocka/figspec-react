@@ -60,7 +60,7 @@
     "build": "yarn build:default",
     "storybook": "start-storybook -p 6007",
     "build-storybook": "build-storybook",
-    "prepublishOnly": "yarn build",
+    "prepack": "yarn build",
     "postinstallDev": "husky install"
   },
   "prettier": {},

@@ -49,4 +49,6 @@ $ yarn storybook
 
 ## Release workflow
 
-(WIP)
+1. Bump the version by using `npm version`
+2. Push the automatically created git commit and git tag
+3. CI build and push the version to npm, wait for it
