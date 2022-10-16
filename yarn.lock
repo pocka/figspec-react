@@ -1570,7 +1570,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figspec/components@npm:^1.0.0":
+"@figspec/components@npm:^1.0.1":
   version: 1.0.1
   resolution: "@figspec/components@npm:1.0.1"
   dependencies:
@@ -1585,7 +1585,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/preset-typescript": ^7.16.7
-    "@figspec/components": ^1.0.0
+    "@figspec/components": ^1.0.1
     "@lit-labs/react": ^1.0.2
     "@storybook/addon-actions": ^6.4.0
     "@storybook/addon-essentials": ^6.4.0
