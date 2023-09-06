@@ -1570,12 +1570,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figspec/components@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@figspec/components@npm:1.0.1"
-  dependencies:
-    lit: ^2.1.3
-  checksum: db33333ad2c3925cc8264e24b4a7b7d0e3a477eaaebbff9033f78c3e2f3273e6c7dbdfb453ee16af6d1ab21d49c2c704882aabcb1a693d2cf627b1fa2494849b
+"@figspec/components@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@figspec/components@npm:2.0.1"
+  checksum: 3555e0642285fc9ebfcd226f37dc27a758c928ce0ee45a6e2d8234d8c6872e08a185b598e964341580bffa24c2a98d91859de5ade80cfcac0f3abb8feb1f2132
   languageName: node
   linkType: hard
 
@@ -1585,8 +1583,8 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.3
     "@babel/preset-typescript": ^7.16.7
-    "@figspec/components": ^1.0.1
-    "@lit-labs/react": ^1.0.2
+    "@figspec/components": ^2.0.1
+    "@lit-labs/react": ^2.0.0
     "@storybook/addon-actions": ^6.4.0
     "@storybook/addon-essentials": ^6.4.0
     "@storybook/addon-links": ^6.4.0
@@ -1729,17 +1727,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/react@npm:^1.0.2":
-  version: 1.0.4
-  resolution: "@lit-labs/react@npm:1.0.4"
-  checksum: 30bd15546f6ab8072f1d242001df1ea2378f3bea26b10b8b2fc5fb3dfe5eeeaa4845eafa3e9bfa31ba6368c1e4a248516ac57b7399a73e46a0434e044c3d77a7
-  languageName: node
-  linkType: hard
-
-"@lit/reactive-element@npm:^1.3.0":
-  version: 1.3.2
-  resolution: "@lit/reactive-element@npm:1.3.2"
-  checksum: 0a89906ddebe2fe2772d942769fc6d69c53e445d476f449690daf371e196b73b99422b7722d262b97d8233e91528ee66b821d013032f0f9fd0f3fd178b4f6a45
+"@lit-labs/react@npm:^2.0.0":
+  version: 2.0.2
+  resolution: "@lit-labs/react@npm:2.0.2"
+  peerDependencies:
+    "@types/react": 17 || 18
+  checksum: 92d4fe300a0184f4534681136e0aff97b4806571f50691c4191295c2f3e3f606ae882fb0fdd7068db47969ad2490c99a839217d3914d5a7ba862646411ff6d54
   languageName: node
   linkType: hard
 
@@ -3262,13 +3255,6 @@ __metadata:
   version: 1.0.8
   resolution: "@types/tapable@npm:1.0.8"
   checksum: b4b754dd0822c407b8f29ef6b766490721c276880f9e976d92ee2b3ef915f11a05a2442ae36c8978bcd872ad6bc833b0a2c4d267f2d611590668a366bad50652
-  languageName: node
-  linkType: hard
-
-"@types/trusted-types@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@types/trusted-types@npm:2.0.2"
-  checksum: 3371eef5f1c50e1c3c07a127c1207b262ba65b83dd167a1c460fc1b135a3fb0c97b9f508efebd383f239cc5dd5b7169093686a692a501fde9c3f7208657d9b0d
   languageName: node
   linkType: hard
 
@@ -8776,36 +8762,6 @@ __metadata:
     enquirer:
       optional: true
   checksum: 7af31851abe25969ef0581c6db808117e36af15b131401795182427769d9824f451ba9e8aff6ccd25b6a4f6c8796f816292caf08e5f1f9b1775e8e9c313dc6c5
-  languageName: node
-  linkType: hard
-
-"lit-element@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "lit-element@npm:3.2.0"
-  dependencies:
-    "@lit/reactive-element": ^1.3.0
-    lit-html: ^2.2.0
-  checksum: 64bd0f05f7a93921a5853e92f4b86b75affc088805f5ce0249c62a02a1d44445dea5c8319badc4cae6e5663afeb60296e3e0f63fd3af265b89fa482c8a846c3d
-  languageName: node
-  linkType: hard
-
-"lit-html@npm:^2.2.0":
-  version: 2.2.5
-  resolution: "lit-html@npm:2.2.5"
-  dependencies:
-    "@types/trusted-types": ^2.0.2
-  checksum: 688fed0a5cf16cd08d837ba89c894162e38798117bcdf8c588254920b4a5448c1a367c2f0ca5e88307a9b1293995de335cf60f0a43b4d6c521089ac3ae0154b1
-  languageName: node
-  linkType: hard
-
-"lit@npm:^2.1.3":
-  version: 2.2.5
-  resolution: "lit@npm:2.2.5"
-  dependencies:
-    "@lit/reactive-element": ^1.3.0
-    lit-element: ^3.2.0
-    lit-html: ^2.2.0
-  checksum: 0d3298ae9d333eef3cd30e9e76003a74db080831e64cc893964e119df0a99d26fe97114bae4bdea365ee93d0ee55f71379e1b004a475cd3ff3c8f28ad2bc152b
   languageName: node
   linkType: hard
 

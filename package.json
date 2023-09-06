@@ -30,8 +30,8 @@
     "./{cjs,esm}/*/index.js"
   ],
   "dependencies": {
-    "@figspec/components": "^1.0.1",
-    "@lit-labs/react": "^1.0.2"
+    "@figspec/components": "^2.0.1",
+    "@lit-labs/react": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^16.14.0 || ^17.0.0 || ^18.0.0"

@@ -18,15 +18,14 @@ const Template = (args) => (
       height: 500,
     }}
     onNodeSelect={action("onNodeSelect")}
-    onPositionChange={action("onPositionChange")}
-    onScaleChange={action("onScaleChange")}
+    onPreferencesUpdate={action("onPreferencesUpdate")}
   />
 );
 
 export const demo = Template.bind({});
 
 demo.args = {
-  nodes: demoJson,
+  apiResponse: demoJson,
   renderedImage: demoImage,
 };
 

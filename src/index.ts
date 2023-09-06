@@ -7,6 +7,8 @@ import { createComponent } from "@lit-labs/react";
 import * as React from "react";
 import type { ForwardRefExoticComponent, RefAttributes } from "react";
 
+export type FigspecPreferences = FigspecFileViewerElement["preferences"];
+
 // Frame viewer
 
 type FigspecFrameViewerElementProps =
@@ -14,7 +16,7 @@ type FigspecFrameViewerElementProps =
   Pick<
     FigspecFrameViewerElement,
     // Element props
-    "nodes" | "renderedImage"
+    "apiResponse" | "renderedImage"
   > &
     // Optional props
     Partial<
@@ -25,17 +27,16 @@ type FigspecFrameViewerElementProps =
         | "className"
         | "style"
         // Element attributes (will be converted to kebab-case)
-        | "zoomSpeed"
-        | "panSpeed"
-        | "zoomMargin"
         | "link"
+        | "preferences"
       >
     >;
 
 interface FigspecFrameViewerEvents {
-  onScaleChange?(ev: CustomEvent<{ scale: number }>): void;
-  onPositionChange?(ev: CustomEvent<{ x: number; y: number }>): void;
   onNodeSelect?(ev: CustomEvent<{ selectedNode: unknown | null }>): void;
+  onPreferencesUpdate?(
+    ev: CustomEvent<{ preferences: FigspecPreferences }>
+  ): void;
 }
 
 export type FigspecFrameViewerProps = FigspecFrameViewerElementProps &
@@ -46,16 +47,15 @@ export type FigspecFrameViewerProps = FigspecFrameViewerElementProps &
 //       `createComponent` has `RefAttributes<unknown>`, which is incompatible with existing
 //       type signature (and breaks ref typings). Also the explicit props definition prevents
 //       every properties turns into optional.
-export const FigspecFrameViewer = createComponent(
-  React,
-  "figspec-frame-viewer",
-  FigspecFrameViewerElement,
-  {
+export const FigspecFrameViewer = createComponent({
+  react: React,
+  tagName: "figspec-frame-viewer",
+  elementClass: FigspecFrameViewerElement,
+  events: {
     onNodeSelect: "nodeselect",
-    onPositionChange: "positionchange",
-    onScaleChange: "scalechange",
-  }
-) as unknown as ForwardRefExoticComponent<
+    onPreferencesUpdate: "preferencesupdate",
+  },
+}) as unknown as ForwardRefExoticComponent<
   FigspecFrameViewerProps & RefAttributes<FigspecFrameViewerElement>
 >;
 
@@ -66,7 +66,7 @@ type FigspecFileViewerElementProps =
   Pick<
     FigspecFileViewerElement,
     // Element props
-    "documentNode" | "renderedImages"
+    "apiResponse" | "renderedImages"
   > &
     // Optional props
     Partial<
@@ -77,31 +77,29 @@ type FigspecFileViewerElementProps =
         | "className"
         | "style"
         // Element attributes (will be converted to kebab-case)
-        | "zoomSpeed"
-        | "panSpeed"
-        | "zoomMargin"
         | "link"
+        | "preferences"
       >
     >;
 
 interface FigspecFileViewerEvents {
-  onScaleChange?(ev: CustomEvent<{ scale: number }>): void;
-  onPositionChange?(ev: CustomEvent<{ x: number; y: number }>): void;
   onNodeSelect?(ev: CustomEvent<{ selectedNode: unknown | null }>): void;
+  onPreferencesUpdate?(
+    ev: CustomEvent<{ preferences: FigspecPreferences }>
+  ): void;
 }
 
 export type FigspecFileViewerProps = FigspecFileViewerElementProps &
   FigspecFileViewerEvents;
 
-export const FigspecFileViewer = createComponent(
-  React,
-  "figspec-file-viewer",
-  FigspecFileViewerElement,
-  {
+export const FigspecFileViewer = createComponent({
+  react: React,
+  tagName: "figspec-file-viewer",
+  elementClass: FigspecFileViewerElement,
+  events: {
     onNodeSelect: "nodeselect",
-    onPositionChange: "positionchange",
-    onScaleChange: "scalechange",
-  }
-) as unknown as ForwardRefExoticComponent<
+    onPreferencesUpdate: "preferencesupdate",
+  },
+}) as unknown as ForwardRefExoticComponent<
   FigspecFileViewerProps & RefAttributes<FigspecFileViewerElement>
 >;
