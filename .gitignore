@@ -26,4 +26,3 @@ packages/*/*.tgz
 
 # Project specific
 /esm
-/cjs
