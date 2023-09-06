@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-09-06
+
+### Changed
+
+- Upgrade `@figspec/components` to `^v2.0.1`.
+- Upgrade `@lit-labs/react` to `^v2.0.0`.
+
+### Removed
+
+- CommonJS files.
+
 ## [1.0.3] - 2022-10-16
 
 ### Changed
