@@ -20,6 +20,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Publish the package
-        run: yarn npm publish --access public
+        run: yarn npm publish --access public --tag "release-1.x"
         env:
           YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
