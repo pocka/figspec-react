@@ -20,8 +20,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Publish the package
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
-          yarn npm publish --access public
+        run: yarn npm publish --access public
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
